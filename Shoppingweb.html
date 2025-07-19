@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GreenCart</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body, html {
+        height: 100%;
+        margin: 0;
+      }
+      .card-img-top {
+          height: 200px;
+            object-fit: cover;
+        }
+      .background-section {
+        background-image: url('vege.jpg'); /* Replace with your image */
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 60px;
+      }
+      .store-card {
+        background-color: rgb(212, 239, 220);
+        border-radius: 20px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        padding: 30px;
+        max-width: 400px;
+        width: 100%;
+      }
+      .location-icon {
+        color: #43a047;
+        font-size: 24px;
+      }
+      .store-card input {
+        height: 50px;
+      }
+      .store-card .btn-success {
+        padding: 0 25px;
+        font-weight: bold;
+      }
+      .store-card p.small-note {
+        font-size: 14px;
+        margin-top: 20px;
+      }
+      section {
+        padding: 80px 0 40px 0;
+      }
+      .navbar-brand {
+        font-weight: bold;
+      }
+      .navbar .nav-link.active {
+        color: #43a047 !important;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom shadow-sm py-2 fixed-top">
+      <div class="container-fluid">
+        <!-- Logo and Brand Name -->
+        <a class="navbar-brand text-success" href="#">
+          <i class="bi bi-cart4 me-2"></i> GreenCart
+        </a>
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop" aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar Content -->
+        <div class="collapse navbar-collapse" id="navbarTop">
+          <!-- Search Bar -->
+          <div class="mx-auto w-50">
+            <input class="form-control" type="search" placeholder="Search for products" aria-label="Search">
+          </div>
+          <!-- Right Side Items -->
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link text-muted" href="#location"><i class="bi bi-geo-alt-fill me-1"></i> Set A Location</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-muted" href="#register">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-muted" href="#cart"><i class="bi bi-cart3 me-1"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-dark ms-2" href="#signin">Sign In</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Bottom Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light py-1 mt-5" style="margin-top: 56px !important;">
+      <div class="container-fluid">
+        <!-- All Categories Button -->
+        <a class="btn btn-success me-3" href="#categories"><i class="bi bi-list"></i> All Categories</a>
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBottom" aria-controls="navbarBottom" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Bottom Navbar Menu -->
+        <div class="collapse navbar-collapse" id="navbarBottom">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="#stores">Stores</a></li>
+            <li class="nav-item"><a class="nav-link" href="#mega">Mega Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pages">Pages</a></li>
+            <li class="nav-item"><a class="nav-link" href="#account">Account</a></li>
+            <li class="nav-item"><a class="nav-link" href="#dashboard">Dashboard</a></li>
+  
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="background-section">
+      <div class="store-card text-center">
+        <h4 class="fw-bold">Check what's in your local store</h4>
+        <p class="text-muted mb-4">See delivery and collection options</p>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Enter Postcode">
+          <button class="btn btn-success" type="button">Check</button>
+        </div>
+        <p class="small-note">
+          Hello, Sign in for the best experience.<br>
+          <a href="#register" class="text-decoration-none text-warning">New to FreshCart? Register</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="bg-white">
+      <div class="container">
+        <h2 class="mb-4 text-success">Categories</h2>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <i class="bi bi-basket2-fill fs-1 text-success"></i>
+                <h5 class="card-title mt-2">Groceries</h5>
+                <p class="card-text">Fresh groceries delivered to your door.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <i class="bi bi-egg-fill fs-1 text-success"></i>
+                <h5 class="card-title mt-2">Vegetables</h5>
+                <p class="card-text">Organic and fresh vegetables.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <i class="bi bi-cup-straw fs-1 text-success"></i>
+                <h5 class="card-title mt-2">Beverages</h5>
+                <p class="card-text">Juices, soft drinks, and more.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <i class="bi bi-bag-heart-fill fs-1 text-success"></i>
+                <h5 class="card-title mt-2">Snacks</h5>
+                <p class="card-text">Tasty snacks for every mood.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="bg-light">
+      <div class="container">
+        <h2 class="mb-4 text-success">Shop</h2>
+        <div class="row g-4">
+         <div class="col-md-4">
+  <div class="card h-100 shadow-sm">
+    <img src="apples.jpg" class="card-img-top" alt="Organic Apples">
+    <div class="card-body">
+      <h5 class="card-title">Organic Apples</h5>
+      <p class="card-text">Fresh and juicy apples.</p>
+      <a href="#cart" class="btn btn-success"><i class="bi bi-cart-plus"></i> Add to Cart</a>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="card h-100 shadow-sm">
+    <img src="tomato.jpg" class="card-img-top" alt="Fresh Tomatoes">
+    <div class="card-body">
+      <h5 class="card-title">Fresh Tomatoes</h5>
+      <p class="card-text">Locally sourced tomatoes.</p>
+      <a href="#cart" class="btn btn-success"><i class="bi bi-cart-plus"></i> Add to Cart</a>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="card h-100 shadow-sm">
+    <img src="lettuce.jpg" class="card-img-top" alt="Green Lettuce">
+    <div class="card-body">
+      <h5 class="card-title">Green Lettuce</h5>
+      <p class="card-text">Crisp and healthy lettuce.</p>
+      <a href="#cart" class="btn btn-success"><i class="bi bi-cart-plus"></i> Add to Cart</a>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stores Section -->
+    <section id="stores" class="bg-white">
+      <div class="container">
+        <h2 class="mb-4 text-success">Stores</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">GreenMart</h5>
+                <p class="card-text">Your local organic store.</p>
+                <a href="#shop" class="btn btn-outline-success">Visit Shop</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">VeggieFresh</h5>
+                <p class="card-text">Fresh veggies every day.</p>
+                <a href="#shop" class="btn btn-outline-success">Visit Shop</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    </section>
+    <section id="cart" class="bg-light">
+      <div class="container">
+        <h2 class="mb-4 text-success">Your Cart</h2>
+        <p>Your selected items will appear here.</p>
+        <a href="#shop" class="btn btn-success"><i class="bi bi-arrow-left"></i> Continue Shopping</a>
+      </div>
+    </section>
+    <section class="py-5 bg-white">
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+      <div>
+        <h2 class="fw-bold mb-1">
+          <i class="bi bi-basket2-fill fs-2 text-success me-2"></i>
+          Our most popular groceries
+        </h2>
+        <div class="text-muted fs-5">Check out our most popular grocery picks of all time.</div>
+      </div>
+      <a href="#shop" class="btn btn-success btn-lg">View all groceries</a>
+    </div>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col">
+        <div class="card border-0 h-100">
+          <img src="apples.jpg" class="card-img-top rounded-4" alt="Organic Apples">
+          <div class="card-body px-0">
+            <div class="text-success fw-bold mb-1">Fruit</div>
+            <h5 class="fw-bold">Organic Apples</h5>
+            <p class="text-muted">Crisp, juicy, and organically grown apples. Perfect for a healthy snack.</p>
+            <div class="text-muted"><i class="bi bi-clock me-1"></i>Fresh Stock</div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0 h-100">
+          <img src="tomato.jpg" class="card-img-top rounded-4" alt="Fresh Tomatoes">
+          <div class="card-body px-0">
+            <div class="text-success fw-bold mb-1">Vegetable</div>
+            <h5 class="fw-bold">Fresh Tomatoes</h5>
+            <p class="text-muted">Locally sourced, ripe tomatoes for your salads and cooking needs.</p>
+            <div class="text-muted"><i class="bi bi-clock me-1"></i>Picked Today</div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0 h-100">
+          <img src="lettuce.jpg" class="card-img-top rounded-4" alt="Green Lettuce">
+          <div class="card-body px-0">
+            <div class="text-success fw-bold mb-1">Leafy Green</div>
+            <h5 class="fw-bold">Green Lettuce</h5>
+            <p class="text-muted">Crisp and healthy lettuce, perfect for salads and sandwiches.</p>
+            <div class="text-muted"><i class="bi bi-clock me-1"></i>Always Fresh</div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0 h-100">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" class="card-img-top rounded-4" alt="Mixed Vegetables">
+          <div class="card-body px-0">
+            <div class="text-success fw-bold mb-1">Combo Pack</div>
+            <h5 class="fw-bold">Mixed Vegetables</h5>
+            <p class="text-muted">A healthy mix of seasonal vegetables for your daily needs.</p>
+            <div class="text-muted"><i class="bi bi-clock me-1"></i>Best Seller</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-white py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+      <div class="col">
+        <div class="mb-3">
+          <i class="bi bi-clock fs-1 text-success"></i>
+        </div>
+        <h5 class="fw-bold">Cheapest basket 25 years running</h5>
+        <p class="text-muted">
+          Get your order delivered to your doorstep at the earliest from FreshCart pickup stores near you.
+        </p>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <i class="bi bi-gift fs-1 text-success"></i>
+        </div>
+        <h5 class="fw-bold">Best Prices & Offers</h5>
+        <p class="text-muted">
+          Cheaper prices than your local supermarket, great cashback offers to top it off.
+        </p>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <i class="bi bi-box fs-1 text-success"></i>
+        </div>
+        <h5 class="fw-bold">Wide Assortment</h5>
+        <p class="text-muted">
+          Choose from 5000+ products across food, personal care, household &amp; other categories
+        </p>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <i class="bi bi-phone fs-1 text-success"></i>
+        </div>
+        <h5 class="fw-bold">Shop with our app</h5>
+        <p class="text-muted">
+          Shop on the go with our app for <span class="text-success">tablet and mobile</span>.<br>
+          Get live order tracking. Get latest feature updates
+        </p>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <i class="bi bi-truck fs-1 text-success"></i>
+        </div>
+        <h5 class="fw-bold">Want your shopping today?</h5>
+        <p class="text-muted">
+          Choose from our award winning <span class="text-success">Express delivery</span> or collection options.
+        </p>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <i class="bi bi-arrow-repeat fs-1 text-success"></i>
+        </div>
+        <h5 class="fw-bold">Easy Returns/Refund</h5>
+        <p class="text-muted">
+          Not satisfied with a product? Return it at the doorstep &amp; get a refund within hours. No questions asked <span class="text-success">policy</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
